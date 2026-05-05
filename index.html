@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ECTRA | High Efficiency BLDC Motor Platform for HVAC</title>
+  <meta name="description" content="High-tech ECTRA BLDC / EC motor platform for HVAC fan applications. Integrated inverter, Modbus RTU, diagnostics, protection and OEM documentation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="aurora"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home">
+      <img src="assets/ectra-logo-white.png" alt="ECTRA logo" />
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#flagship">Flagship</a>
+      <a href="#inrunner">Inrunner</a>
+      <a href="#platform">Platform</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#control">Control</a>
+      <a href="#performance">Performance</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="top-cta" href="#documentation">Download OM</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg-text">BLDC HVAC</div>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="status-pill">
+            <span class="pulse"></span>
+            OEM-ready high efficiency motor platform
+          </div>
+
+          <h1>
+            Engineered airflow.
+            <span>Electrified.</span>
+          </h1>
+
+          <p class="lead">
+            An integrated BLDC / EC motor platform for HVAC: high efficiency, power electronics,
+            Modbus RTU, diagnostics, protection functions and OEM-grade technical documentation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#platform">Explore platform</a>
+            <a class="btn glass" href="#architecture">See architecture</a>
+          </div>
+
+          <div class="metric-strip">
+            <div>
+              <strong>1.5 / 4.0 / 7.5</strong>
+              <span>kW families</span>
+            </div>
+            <div>
+              <strong>3×400 VAC</strong>
+              <span>industrial supply</span>
+            </div>
+            <div>
+              <strong>RS-485</strong>
+              <span>Modbus RTU</span>
+            </div>
+            <div>
+              <strong>HVAC S1</strong>
+              <span>continuous duty</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-machine reveal">
+          <div class="halo halo-a"></div>
+          <div class="halo halo-b"></div>
+          <div class="energy-orbit orbit-a"></div>
+          <div class="energy-orbit orbit-b"></div>
+
+          <div class="real-motor-stage">
+            <img class="real-motor" src="assets/ectra-inrunner-motor.png" alt="ECTRA inrunner BLDC motor" />
+            <div class="motor-shadow"></div>
+          </div>
+
+          <div class="orbit-chip chip-1">
+            <small>DESIGN</small>
+            <b>INRUNNER</b>
+          </div>
+          <div class="orbit-chip chip-2">
+            <small>STRUCTURE</small>
+            <b>HIGH STIFFNESS</b>
+          </div>
+          <div class="orbit-chip chip-3">
+            <small>FLOW</small>
+            <b>LOW OBSTRUCTION</b>
+          </div>
+          <div class="orbit-chip chip-4">
+            <small>BENEFIT</small>
+            <b>LOWER VIBRATION</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span>
+        Scroll
+      </div>
+    </section>
+
+
+    <section class="section flagship-section" id="flagship">
+      <div class="section-head wide reveal">
+        <p class="eyebrow">FLAGSHIP PRODUCT EXPERIENCE</p>
+        <h2>One motor platform. Shown like a premium engineered system.</h2>
+        <p class="text">
+          The flagship section presents the ECTRA inrunner motor as a real product: housing, cooling ribs,
+          stator cooling path, integrated electronics, airflow zone and service-ready interfaces.
+        </p>
+      </div>
+
+      <div class="flagship-stage reveal">
+        <div class="flagship-visual">
+          <div class="airflow airflow-a"></div>
+          <div class="airflow airflow-b"></div>
+          <div class="airflow airflow-c"></div>
+          <img src="assets/ectra-inrunner-motor.png" alt="ECTRA inrunner motor" class="flagship-motor" />
+
+          <button class="hotspot hs-1 active" data-hotspot="housing"><span></span>Housing</button>
+          <button class="hotspot hs-2" data-hotspot="cooling"><span></span>Cooling ribs</button>
+          <button class="hotspot hs-3" data-hotspot="shaft"><span></span>Inrunner shaft</button>
+          <button class="hotspot hs-4" data-hotspot="electronics"><span></span>Electronics</button>
+        </div>
+
+        <div class="flagship-info">
+          <p class="product-label">ACTIVE HOTSPOT</p>
+          <h3 id="hotspotTitle">Rigid aluminium housing</h3>
+          <p id="hotspotText">
+            The outer housing provides a stable mechanical reference and a direct thermal path from the stator
+            to the environment. This is one of the key advantages of an inrunner HVAC motor.
+          </p>
+
+          <div class="flagship-metrics">
+            <div><span>Mechanical concept</span><b>Inrunner</b></div>
+            <div><span>Cooling path</span><b>Stator → housing</b></div>
+            <div><span>System target</span><b>Low vibration</b></div>
+            <div><span>Integration</span><b>OEM ready</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-comparison reveal">
+        <div class="split-side inrunner-side">
+          <h3>ECTRA inrunner</h3>
+          <img src="assets/ectra-inrunner-motor.png" alt="ECTRA inrunner motor" />
+          <ul>
+            <li>Stable rotor-bearing system</li>
+            <li>Lower rotating motor mass</li>
+            <li>Improved cooling of windings</li>
+            <li>Better fan-system efficiency potential</li>
+          </ul>
+        </div>
+
+        <div class="split-center">VS</div>
+
+        <div class="split-side outrunner-side">
+          <h3>Typical outrunner</h3>
+          <img class="outrunner-img" src="assets/typical-outrunner.png" alt="Typical outrunner motor" />
+          <ul>
+            <li>Large rotating outer body</li>
+            <li>Higher rotating mass</li>
+            <li>Higher bearing load sensitivity</li>
+            <li>Possible obstruction in airflow axis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section value">
+      <div class="section-head reveal">
+        <p class="eyebrow">NOT A COMPONENT. A COMPLETE DRIVE ECOSYSTEM.</p>
+        <h2>A product platform that looks as engineered as it performs.</h2>
+      </div>
+
+      <div class="cards four">
+        <article class="card reveal">
+          <div class="card-glow"></div>
+          <span class="icon">η</span>
+          <h3>Efficiency driven</h3>
+          <p>Designed for high fan-system efficiency, not only isolated laboratory motor efficiency.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-glow"></div>
+          <span class="icon">⌁</span>
+          <h3>Integrated power</h3>
+          <p>EMI filter, DC-link, inverter, current control and protection logic inside one controlled platform.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-glow"></div>
+          <span class="icon">⇄</span>
+          <h3>Native integration</h3>
+          <p>0–10 V, digital enable and Modbus RTU prepared for BMS, PLC, SCADA and service tools.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-glow"></div>
+          <span class="icon">▣</span>
+          <h3>OEM discipline</h3>
+          <p>Traceability, commissioning, fault handling, diagnostics and lifecycle documentation from day one.</p>
+        </article>
+      </div>
+    
+</section>
+
+    <section class="section inrunner-advantage" id="inrunner">
+      <div class="section-head wide reveal">
+        <p class="eyebrow">INRUNNER ADVANTAGE</p>
+        <h2>Designed for stable mechanics, cleaner airflow and long-term durability.</h2>
+        <p class="text">
+          ECTRA uses an inrunner architecture: the rotating system is compact and mechanically stiff,
+          while the stator is in direct thermal contact with the housing. This is the right direction
+          for serious HVAC fan systems.
+        </p>
+      </div>
+
+      <div class="advantage-grid">
+        <article class="advantage-card reveal">
+          <span>01</span>
+          <h3>Higher mechanical stiffness</h3>
+          <p>Lower radial and axial deflection, better alignment of the rotor-bearing system and reduced vibration risk.</p>
+        </article>
+        <article class="advantage-card reveal">
+          <span>02</span>
+          <h3>Cleaner fan aerodynamics</h3>
+          <p>No large rotating motor body in the flow axis. Less disturbance, lower pressure loss and better system efficiency.</p>
+        </article>
+        <article class="advantage-card reveal">
+          <span>03</span>
+          <h3>Lower bearing loads</h3>
+          <p>Lower rotating motor mass reduces bearing stress and supports longer service life in continuous HVAC operation.</p>
+        </article>
+        <article class="advantage-card reveal">
+          <span>04</span>
+          <h3>Better winding cooling</h3>
+          <p>The external stator is directly connected to the housing, improving heat transfer and reducing winding temperature.</p>
+        </article>
+      </div>
+
+      <div class="comparison-panel reveal">
+        <div class="comparison-column positive">
+          <h3>ECTRA Inrunner</h3>
+          <ul>
+            <li>Compact rotating system</li>
+            <li>Stable rotor-bearing alignment</li>
+            <li>Reduced vibration</li>
+            <li>Improved cooling path</li>
+            <li>Optimized fan-system efficiency</li>
+          </ul>
+        </div>
+        <div class="comparison-divider">VS</div>
+        <div class="comparison-column negative">
+          <h3>Typical Outrunner</h3>
+          <ul>
+            <li>Large rotating outer body</li>
+            <li>Higher rotating mass</li>
+            <li>Higher bearing load</li>
+            <li>Airflow obstruction in fan axis</li>
+            <li>More sensitivity to imbalance</li>
+          </ul>
+        </div>
+      </div>
+
+
+    <section class="section platform" id="platform">
+      <div class="section-head wide reveal">
+        <p class="eyebrow">ECTRA MOTOR PLATFORM</p>
+        <h2>One architecture. Three power families. Consistent integration.</h2>
+      </div>
+
+      <div class="product-stage reveal">
+        <div class="model-selector">
+          <button class="model-btn active" data-model="15">ECTRA 1.5 kW</button>
+          <button class="model-btn" data-model="40">ECTRA 4.0 kW</button>
+          <button class="model-btn" data-model="75">ECTRA 7.5 kW</button>
+        </div>
+
+        <div class="product-grid product-grid-balanced">
+          <div class="product-visual product-real clean-product-visual">
+            <div class="clean-orbit orbit-main"></div>
+            <div class="clean-orbit orbit-soft"></div>
+            <img class="product-motor clean-product-motor" src="assets/ectra-inrunner-motor.png" alt="ECTRA inrunner motor" />
+          </div>
+
+          <div class="product-info product-info-side" id="productInfo">
+            <p class="product-label">ACTIVE CONFIGURATION</p>
+            <h3>ECTRA 1.5 kW</h3>
+            <p>Compact high-efficiency BLDC / EC platform for HVAC fan assemblies, AHU modules and small plug fan applications.</p>
+            <div class="spec-grid">
+              <div><span>Supply</span><b>3×400 VAC</b></div>
+              <div><span>Control</span><b>0–10 V / RTU</b></div>
+              <div><span>Ambient</span><b>-20…+50°C</b></div>
+              <div><span>Interface</span><b>RS-485</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture" id="architecture">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow">POWER & CONTROL ARCHITECTURE</p>
+          <h2>Visible engineering, not empty marketing.</h2>
+          <p class="text">
+            The website should show the real product architecture: 3×400 VAC supply, filtering,
+            DC-link, inverter, BLDC commutation, monitoring and communication. This builds trust.
+          </p>
+        </div>
+
+        <div class="architecture-panel architecture-clean reveal">
+          <div class="arch-flow-row">
+            <div class="arch-node">3×400<br>VAC</div>
+            <div class="arch-connector"></div>
+            <div class="arch-node">EMI<br>Filter</div>
+            <div class="arch-connector"></div>
+            <div class="arch-node hot">DC<br>Link</div>
+            <div class="arch-connector"></div>
+            <div class="arch-node">Inverter</div>
+            <div class="arch-connector"></div>
+            <div class="arch-node motor">BLDC<br>Motor</div>
+          </div>
+
+          <div class="arch-subsystem">
+            <div><span>Control MCU</span><b>speed / current / protection</b></div>
+            <div><span>Communication</span><b>RS-485 Modbus RTU</b></div>
+            <div><span>Inputs</span><b>0–10 V / digital enable</b></div>
+            <div><span>Diagnostics</span><b>faults / telemetry / journal</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section control" id="control">
+      <div class="section-head reveal">
+        <p class="eyebrow">CONTROL ROOM EXPERIENCE</p>
+        <h2>A dashboard as a sales advantage.</h2>
+      </div>
+
+      <div class="control-grid">
+        <div class="dashboard-pro reveal">
+          <div class="dash-header">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <b>ECTRA Live Motor Telemetry</b>
+            <em>ONLINE</em>
+          </div>
+
+          <div class="dash-body">
+            <div class="gauge">
+              <svg viewBox="0 0 220 220">
+                <circle cx="110" cy="110" r="88"></circle>
+                <circle class="progress" cx="110" cy="110" r="88"></circle>
+              </svg>
+              <div>
+                <strong id="rpm">1248</strong>
+                <span>rpm</span>
+              </div>
+            </div>
+
+            <div class="telemetry">
+              <div><span>Current RMS</span><b id="amps">5.8 A</b></div>
+              <div><span>DC Bus</span><b>558 V</b></div>
+              <div><span>Power stage</span><b>42°C</b></div>
+              <div><span>Fault code</span><b class="ok">0 / OK</b></div>
+            </div>
+          </div>
+
+          <div class="registers">
+            <span>Ctrl:Mode</span>
+            <span>Ctrl:Setpoint</span>
+            <span>Meas:DcBus</span>
+            <span>Meas:Current</span>
+            <span>Fault:Code</span>
+            <span>Failsafe:Mode</span>
+            <span>RS485:Address</span>
+            <span>Feedback:State</span>
+          </div>
+        </div>
+
+        <div class="control-copy reveal">
+          <h3>An automation engineer should instantly see that this is a product built for integration.</h3>
+          <p>
+            Instead of generic tiles, the page presents a technical interface: RUN status,
+            DC-link voltage, current, temperature, fault code, registers and control data.
+          </p>
+          <ul>
+            <li>Modbus RTU register map</li>
+            <li>Failsafe configuration</li>
+            <li>Alarm and fault matrix</li>
+            <li>Commissioning and service workflow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section performance" id="performance">
+      <div class="section-head wide reveal">
+        <p class="eyebrow">PERFORMANCE INTELLIGENCE</p>
+        <h2>Curves, operating points and technical data presented as a premium system.</h2>
+      </div>
+
+      <div class="performance-grid reveal">
+        <div class="chart-shell">
+          <div class="chart-toolbar">
+            <span>Fan curve</span>
+            <span>Efficiency</span>
+            <span>BEP</span>
+          </div>
+          <svg viewBox="0 0 1000 420" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="curveMain" x1="0" x2="1">
+                <stop offset="0" stop-color="#00ff88"/>
+                <stop offset=".52" stop-color="#ffd000"/>
+                <stop offset="1" stop-color="#ff6a00"/>
+              </linearGradient>
+            </defs>
+            <g class="grid">
+              <path d="M80 40 V360 M220 40 V360 M360 40 V360 M500 40 V360 M640 40 V360 M780 40 V360 M920 40 V360" />
+              <path d="M80 80 H940 M80 150 H940 M80 220 H940 M80 290 H940 M80 360 H940" />
+            </g>
+            <path class="curve shadow" d="M90 335 C210 260 305 204 440 160 C595 110 725 106 920 64" />
+            <path class="curve main" d="M90 335 C210 260 305 204 440 160 C595 110 725 106 920 64" />
+            <path class="curve secondary" d="M90 365 C260 306 410 258 560 230 C720 200 820 166 920 130" />
+            <circle class="bep" cx="442" cy="160" r="9" />
+            <text x="462" y="153">BEP / optimal zone</text>
+          </svg>
+        </div>
+
+        <div class="kpi-panel">
+          <div><span>Static efficiency</span><b>up to 67%*</b></div>
+          <div><span>Power range</span><b>1.5–7.5 kW</b></div>
+          <div><span>Control modes</span><b>Analog / % / RPM / Hz</b></div>
+          <div><span>Data source</span><b>AMCA / lab CSV ready</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compliance" id="compliance">
+      <div class="cards three">
+        <article class="card reveal">
+          <span class="icon">CE</span>
+          <h3>European framework</h3>
+          <p>EMC, LVD, machinery integration wording and controlled declaration structure.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon">UL</span>
+          <h3>North America path</h3>
+          <p>Prepared structure for UL / North America compliance communication and technical release.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon">EMC</span>
+          <h3>Installation reality</h3>
+          <p>Grounding, shielding, cable routing, worst-case configuration and system-level responsibility.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section documentation" id="documentation">
+      <div class="doc-terminal reveal">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <b>ECTRA_DOCUMENTATION_INDEX</b>
+        </div>
+        <div class="terminal-body">
+          <a href="#">/operation-installation-integration-manual</a>
+          <a href="#">/product-datasheets</a>
+          <a href="#">/modbus-register-map</a>
+          <a href="#">/wiring-diagrams</a>
+          <a href="#">/emc-test-configuration</a>
+          <a href="#">/commissioning-checklist</a>
+          <a href="#">/alarm-matrix</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-box reveal">
+        <p class="eyebrow">ECTRA GROUP</p>
+        <h2>Built for serious HVAC OEMs.</h2>
+        <p class="text center">
+          The website platform is ready for expansion: product catalogue, download center,
+          selector tool, operation manual, Modbus registers and technical dashboard.
+        </p>
+        <div class="hero-actions center-actions">
+          <a class="btn primary" href="mailto:marketing@ectra-group.com">marketing@ectra-group.com</a>
+          <a class="btn glass" href="mailto:service@ectra-group.com">service@ectra-group.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/ectra-logo-white.png" alt="ECTRA logo" />
+    <span>© 2026 ECTRA GROUP — High Efficiency BLDC Motor Platform for HVAC</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
