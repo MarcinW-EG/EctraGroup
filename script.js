@@ -101,3 +101,44 @@ document.querySelectorAll(".hotspot").forEach((button) => {
     }
   });
 });
+const registerData = {
+  control: [
+    ["Ctrl:Mode", "Operating mode selection", "RW"],
+    ["Ctrl:Setpoint", "Speed / demand reference", "RW"],
+    ["Failsafe:Mode", "Fallback behaviour", "RW"],
+    ["RS485:Address", "Device address", "RW"]
+  ],
+  measurements: [
+    ["Meas:Current", "Phase and average current", "R"],
+    ["Meas:DcBus", "DC-link voltage", "R"],
+    ["Meas:Ripple", "DC-link ripple indicator", "R"],
+    ["Meas:Temp", "Power stage temperature", "R"]
+  ],
+  faults: [
+    ["Fault:Code", "Active fault code", "R"],
+    ["Fault:Reset", "Fault reset command", "W"],
+    ["Journal:Mask", "Event filtering", "RW"],
+    ["Feedback:State", "Operating state", "R"]
+  ],
+  service: [
+    ["Version:Hardware", "Hardware revision", "R"],
+    ["Version:Software", "Firmware version", "R"],
+    ["Counters:Hours", "Operating hours", "R"],
+    ["Counters:RS485", "Communication counter", "R"]
+  ]
+};
+
+document.querySelectorAll(".reg-tab").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".reg-tab").forEach((b) => b.classList.remove("active"));
+    button.classList.add("active");
+
+    const table = document.getElementById("registerTable");
+    const rows = registerData[button.dataset.reg] || registerData.control;
+
+    if (table) {
+      table.innerHTML = '<div class="reg-row head"><span>Register group</span><span>Function</span><span>Access</span></div>' +
+        rows.map((row) => `<div class="reg-row"><span>${row[0]}</span><span>${row[1]}</span><span>${row[2]}</span></div>`).join("");
+    }
+  });
+});
