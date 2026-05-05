@@ -202,7 +202,7 @@ h1 {
   margin: 28px 0 0;
   max-width: 840px;
   font-family: var(--font-tech);
-  font-size: clamp(54px, 7.8vw, 108px);
+  font-size: clamp(54px, 7.8vw, 78px);
   line-height: .88;
   letter-spacing: -.055em;
   text-transform: uppercase;
@@ -2632,6 +2632,123 @@ h1, h2, h3 {
 
 @media (max-width: 1180px) {
   .hybrid-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.product-family-grid,
+.confidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.family-card,
+.confidence-card {
+  border: 1px solid rgba(255,255,255,.135);
+  background:
+    radial-gradient(circle at 16% 0%, rgba(0,255,136,.13), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+  border-radius: var(--radius);
+  box-shadow: 0 34px 100px rgba(0,0,0,.28);
+  backdrop-filter: blur(22px);
+  padding: 30px;
+}
+
+.family-card {
+  min-height: 360px;
+}
+
+.family-card span {
+  color: var(--green);
+  font-family: var(--font-tech);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.family-card h3 {
+  margin-top: 24px;
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.family-card dl {
+  margin: 28px 0 0;
+}
+
+.family-card dl div {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.family-card dt {
+  color: var(--muted);
+}
+
+.family-card dd {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+}
+
+.data-table {
+  border: 1px solid rgba(255,255,255,.135);
+  background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+  border-radius: var(--radius);
+  box-shadow: 0 34px 100px rgba(0,0,0,.28);
+  overflow: hidden;
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: .9fr 1fr 1.25fr;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(255,255,255,.085);
+  color: var(--muted);
+}
+
+.data-row:last-child {
+  border-bottom: 0;
+}
+
+.data-row.head {
+  color: #fff;
+  font-family: var(--font-tech);
+  font-weight: 900;
+  background: rgba(255,255,255,.045);
+}
+
+.data-row span:first-child {
+  color: #fff;
+  font-weight: 850;
+}
+
+.confidence-card {
+  min-height: 230px;
+}
+
+.confidence-card h3 {
+  font-size: clamp(24px, 2.4vw, 34px);
+}
+
+.confidence-card p {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+@media (max-width: 1180px) {
+  .product-family-grid,
+  .confidence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .data-row,
+  .family-card dl div {
     grid-template-columns: 1fr;
   }
 }
